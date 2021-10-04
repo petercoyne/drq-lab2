@@ -11,13 +11,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <Switch>
-            <Route path='/' component={Content} exact/>
-            <Route path='/read' component={Header} exact/>
-            <Route path='/create' component={Footer} exact/>
-          </Switch>
-        </Router>
         <Navbar bg="primary" variant="dark">
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Nav className="me-auto">
@@ -26,6 +19,13 @@ class App extends Component {
             <Nav.Link href="/create">Create</Nav.Link>
           </Nav>
         </Navbar>
+        <Router>
+          <Switch>
+            <Route path='/' component={Content} exact/>
+            <Route path='/read' component={Header} exact/>
+            <Route path='/create' component={Footer} exact/>
+          </Switch>
+        </Router>
       </div>
     );
   }
